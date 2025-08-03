@@ -19,6 +19,12 @@ export default {
 		},
 		extend: {
 			colors: {
+				// Phineas and Ferb themed colors
+				'pf-orange': '#FF6B35',
+				'pf-teal': '#4ECDC4', 
+				'pf-yellow': '#FFE66D',
+				'pf-green': '#95E1D3',
+				'pf-blue': '#48E6CF',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -84,11 +90,32 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'bounce-coin': {
+					'0%, 20%, 50%, 80%, 100%': { transform: 'translateY(0)' },
+					'40%': { transform: 'translateY(-30px) rotate(180deg)' },
+					'60%': { transform: 'translateY(-15px) rotate(360deg)' }
+				},
+				'pulse-glow': {
+					'0%, 100%': { boxShadow: '0 0 5px rgba(255, 107, 53, 0.5)' },
+					'50%': { boxShadow: '0 0 20px rgba(255, 107, 53, 0.8)' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'wiggle': {
+					'0%, 100%': { transform: 'rotate(-3deg)' },
+					'50%': { transform: 'rotate(3deg)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'bounce-coin': 'bounce-coin 2s infinite',
+				'pulse-glow': 'pulse-glow 2s infinite',
+				'float': 'float 3s ease-in-out infinite',
+				'wiggle': 'wiggle 1s ease-in-out infinite'
 			}
 		}
 	},
